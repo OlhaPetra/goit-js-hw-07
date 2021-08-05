@@ -12,3 +12,42 @@ const images = [
         alt: 'Group of Horses Running',
     },
 ];
+
+//скрипт для создания галлереи изображений по массиву данных
+//вариант 1
+function createGallery(array) {
+    const galleryList = document.getElementById("gallery");
+    galleryList.classList = "gallery_list";
+
+    const galleryItems = array.map((el) => `<li class="gallery_item"><img src="${el.url}" alt="${el.alt}" width="300"></li>`);
+    galleryList.insertAdjacentHTML('afterbegin', galleryItems);
+
+    return galleryList
+}
+
+console.log(createGallery(images))
+
+
+//вариант 2
+
+//function createGallery (array) {
+//    const galleryList = document.getElementById("gallery");
+//    galleryList.classList = "gallery_list";
+//    const galleryItems = array.map((item) => {
+//       const galleryItem = document.createElement("li");
+//        galleryItem.classList = "gallery_item";
+//
+//       const galleryImg = document.createElement("img");
+//        galleryImg.setAttribute('src', item.url);
+//        galleryImg.setAttribute('alt', item.alt);
+//        galleryImg.setAttribute('width', 300);
+//                
+//        galleryItem.append(galleryImg)
+//        return galleryItem
+//    })
+//    
+//    galleryList.append(...galleryItems);
+//    return galleryList
+//}
+
+//console.log(createGallery(images))

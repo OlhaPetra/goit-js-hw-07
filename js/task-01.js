@@ -1,30 +1,10 @@
+//Посчитает и выведет в консоль количество категорий в ul#categories
+
 const allCategoriesEl = document.querySelectorAll(".item");
 console.log(`В списке ${allCategoriesEl.length} категории.`);
-console.log(allCategoriesEl);
 
-const showCategories = allCategoriesEl.map(categoryEl => {
-    (const itemTitleEl = categoryEl.firstElementChild;
-    //console.log(`Категория: ${itemTitleEl.textContent}`);
-    )}
-showCategories()
+//Для каждого элемента в списке найдет и выведет в консоль текст заголовка элемента и количество элементов в категории
 
-
-
-    //console.log(`Категория: ${categoryEl.firstElementChild.textContent}`))
-
-
-//for (let i = 0; i = allCategoriesEl.length; i++) {
-    //console.log(allCategoriesEl[i]);
-
-    //const itemTitleEl = allCategoriesEl[i]
-
-    //.firstElementChild;
-    //console.log(`Категория: ${itemTitleEl.textContent}`);
-    //const subcategoryItemEl = allCategoriesEl[i].lastElementChild;
-    //const subcategoryTitleItemEl = subcategoryItemEl.children;
-    //console.log(`Количество: ${subcategoryTitleItemEl.length}`);
-//};
-
-
-
+allCategoriesEl.forEach(categoriesEl => console.log(`Категория: ${categoriesEl.firstElementChild.textContent}
+Количество элементов:${categoriesEl.lastElementChild.children.length}`));
 
