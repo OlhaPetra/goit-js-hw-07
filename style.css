@@ -5,6 +5,7 @@
 }
 
 .gallery_item {
+  display: flex;
   list-style: none;
 }
 

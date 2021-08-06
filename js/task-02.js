@@ -20,6 +20,8 @@ const items = array.map((item) => {
 })
     
     ingredientsList.append(...items);
+    console.log(ingredientsList)
+    
     return ingredientsList
 }
 
