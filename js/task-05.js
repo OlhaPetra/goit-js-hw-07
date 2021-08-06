@@ -10,5 +10,3 @@ function showName(event) {
         outputNameEl.textContent = 'незнакомец';
     } else { outputNameEl.textContent = inputNameEl.value};
 };
-
-
