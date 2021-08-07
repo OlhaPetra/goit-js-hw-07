@@ -16,15 +16,16 @@ function getRandomColor() {
   return Math.floor(Math.random() * 256);
 }
 
+let firstBoxSize = 30;
+
 function createBoxes() {
-  let amount = Number(inputEl.getAttribute("counter"));
-  const fragment = document.createDocumentFragment();
-  const firstBoxSize = 30;
+   let amount = Number(inputEl.getAttribute("counter"));
+   const fragment = document.createDocumentFragment();
 
   for (let i = 1; i <= amount; i++) {
-    let boxSize = firstBoxSize + i * 10;
+    firstBoxSize += 10;
     const newBox = document.createElement("div");
-    newBox.style.cssText = `width: ${boxSize}px; height: ${boxSize}px; margin: 5px; background-color: rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
+    newBox.style.cssText = `width: ${firstBoxSize}px; height: ${firstBoxSize}px; margin: 5px; background-color: rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
     fragment.append(newBox);
   }
 
@@ -32,5 +33,6 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
-  boxes.innerHTML = "";
+    boxes.innerHTML = "";
+    firstBoxSize = 30;
 }
