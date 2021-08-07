@@ -1,16 +1,17 @@
-const inputEl = document.getElementById('validation-input');
+const inputEl = document.getElementById("validation-input");
+const maxInputText = inputEl.getAttribute("data-length");
 
-const maxInputText = inputEl.getAttribute('data-length');
+inputEl.addEventListener("blur", onBlur);
 
-inputEl.addEventListener('input', ()=> currentInputText = inputEl.value.length);
-
-inputEl.addEventListener('focus', chekInputTextLength);
-
-function chekInputTextLength(event) {
-    event.preventDefault();
-
-/*  if (cussrentInputText <= maxInputText) {
-    inputEl.classList.add('valid')
-    } else {inputEl.classList.add('invalid')} */
-}
-
+function onBlur() {
+  if (inputEl.value.length > maxInputText) {
+    inputEl.classList.remove("valid");
+    inputEl.classList.add("invalid");
+  } else if (inputEl.value === "") {
+    inputEl.classList.remove("valid");
+    inputEl.classList.remove("invalid");
+  } else {
+    inputEl.classList.remove("invalid");
+    inputEl.classList.add("valid");
+  }
+};

@@ -3,9 +3,7 @@ const outputNameEl = document.getElementById('name-output');
 
 inputNameEl.addEventListener('input', showName)
 
-function showName(event) {
-    event.preventDefault();
-
+function showName() {
     if (inputNameEl.value === '') {
         outputNameEl.textContent = 'незнакомец';
     } else { outputNameEl.textContent = inputNameEl.value};
