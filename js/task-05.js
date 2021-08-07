@@ -3,8 +3,8 @@ const outputNameEl = document.getElementById('name-output');
 
 inputNameEl.addEventListener('input', showName)
 
-function showName() {
-    if (inputNameEl.value === '') {
+function showName(event) {
+    if (event.target.value === '') {
         outputNameEl.textContent = 'незнакомец';
-    } else { outputNameEl.textContent = inputNameEl.value};
+    } else { outputNameEl.textContent = event.target.value};
 };

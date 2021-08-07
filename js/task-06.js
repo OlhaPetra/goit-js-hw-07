@@ -3,15 +3,15 @@ const maxInputText = inputEl.getAttribute("data-length");
 
 inputEl.addEventListener("blur", onBlur);
 
-function onBlur() {
-  if (inputEl.value.length > maxInputText) {
-    inputEl.classList.remove("valid");
-    inputEl.classList.add("invalid");
-  } else if (inputEl.value === "") {
-    inputEl.classList.remove("valid");
-    inputEl.classList.remove("invalid");
+function onBlur(event) {
+  if (event.target.value.length > maxInputText) {
+    event.target.classList.remove("valid");
+    event.target.classList.add("invalid");
+  } else if (event.target.value === "") {
+    event.target.classList.remove("valid");
+    event.target.classList.remove("invalid");
   } else {
-    inputEl.classList.remove("invalid");
-    inputEl.classList.add("valid");
+    event.target.classList.remove("invalid");
+    event.target.classList.add("valid");
   }
 };
