@@ -19,8 +19,8 @@ function getRandomColor() {
 let firstBoxSize = 30;
 
 function createBoxes() {
-   let amount = Number(inputEl.getAttribute("counter"));
-   const fragment = document.createDocumentFragment();
+  let amount = Number(inputEl.getAttribute("counter"));
+  const fragment = document.createDocumentFragment();
 
   for (let i = 1; i <= amount; i++) {
     firstBoxSize += 10;
@@ -33,6 +33,6 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
-    boxes.innerHTML = "";
-    firstBoxSize = 30;
+  boxes.innerHTML = "";
+  firstBoxSize = 30;
 }

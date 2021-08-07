@@ -14,4 +14,4 @@ function onBlur(event) {
     event.target.classList.remove("invalid");
     event.target.classList.add("valid");
   }
-};
+}
